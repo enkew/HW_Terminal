@@ -1,0 +1,66 @@
+	ls //просмотр что находится в папке
+1) Посмотреть где я
+	pwd //в какой папке находишься
+2) Создать папку
+	mkdir New_Create 
+3) Зайти в папку
+	cd New_create 
+4) Создать 3 папки
+	mkdir Create1 Create2 Create3
+5) Зайти в любоую папку
+	cd create2
+6) Создать 5 файлов (3 txt, 2 json)
+	touch Test1.txt Test2.txt Test3.txt Json1.json Json2.json
+7) Создать 3 папки
+	mkdir Folder1 Folder2 Folder3
+8. Вывести список содержимого папки
+	ls
+	ls -la //проверить содердимое папки с информацией
+9) + Открыть любой txt файл
+	start Test1.txt //открыть файл
+	cat >> Test1.txt //открытие файла в Terminal
+10) + написать туда что-нибудь, любой текст.
+	1) cat >> Test1.txt 
+	Hello World
+	2) vim test1.txt //1. Ввести команду
+	i //2. Тап по кнопке на клавиатуре
+	Hello World //3. Вписать текст в нужную строку
+	Esc //4. Для выхода из функции Редактирования
+11) + сохранить и выйти.
+	:wq! //Выход с сохранением данных
+	:qa! //Выход без сохранения
+12) Выйти из папки на уровень выше
+	cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+	mv /d/HW_terminal/new_create/create2/test2.txt /d/HW_terminal/new_create/create2/Json2.json /d/hw_terminal/new_create/create1
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+	cp /d/HW_terminal/new_create/create1/test2.txt /d/HW_terminal/new_create/create1/Json2.json /d/hw_terminal/new_create/create3
+15) Найти файл по имени
+	find . -name "Json2*" //зависим от регистра
+	find . -iname "json2*" //не зависим от регистра
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+	grep "Hello" test1.txt //Нужно находиться в той же деревтике
+17) вывести несколько первых строк из текстового файла
+	head -2 test1.txt //после "-" указывается сколько нужно строк вывести
+18) вывести несколько последних строк из текстового файла
+	tail -3 test1.txt //после "-" указывается сколько нужно строк вывести
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+	less test1.txt
+		:q //выход из просмотра
+20) вывести дату и время
+	date
+Задание *
+1) Отправить http запрос на сервер.
+	curl http://162.55.220.72:5005/terminal-hw-request
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+	sh script.sh //запуск скрипта, Сам скрипт - это отдельны файл и содержимое написано ниже
+	// #!/bin/bush
+	// cd HW_terminal
+	// mkdir New_Create1 
+	// cd new_create1
+	// mkdir Create1 Create2 Create3
+	// cd create2
+	// touch Test1.txt Test2.txt Test3.txt Json1.json Json2.json
+	// mkdir Folder1 Folder2 Folder3
+	// ls
+	// mv /d/HW_terminal/new_create1/create2/test2.txt /d/HW_terminal/new_create1/create2/Json2.json /d/hw_terminal/new_create1/create1
